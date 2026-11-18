@@ -14,8 +14,8 @@ export default function Testimonials() {
   return (
     <section className="py-12 lg:py-16 bg-[#E9E8F8] relative overflow-hidden">
       {/* Background ambient lighting in Powdered Blue & Sunset Peach */}
-      <div className="absolute bottom-0 right-1/3 w-80 h-80 bg-[#8DB9F0]/20 blur-[130px] pointer-events-none rounded-full" />
-      <div className="absolute top-10 left-10 w-80 h-80 bg-[#F5B69E]/20 blur-[130px] pointer-events-none rounded-full" />
+      <div className="absolute bottom-0 right-1/3 w-80 h-80 glow-spot-blue pointer-events-none rounded-full" />
+      <div className="absolute top-10 left-10 w-80 h-80 glow-spot-peach pointer-events-none rounded-full" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         

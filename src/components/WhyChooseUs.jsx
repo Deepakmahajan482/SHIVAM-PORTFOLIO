@@ -56,8 +56,8 @@ export default function WhyChooseUs() {
   return (
     <section className="py-12 lg:py-16 bg-[#E9E8F8] relative overflow-hidden">
       {/* Background ambient lighting */}
-      <div className="absolute top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#8DB9F0]/20 blur-[160px] pointer-events-none rounded-full" />
-      <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-[#F5B69E]/20 blur-[160px] pointer-events-none rounded-full" />
+      <div className="absolute top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] glow-spot-blue pointer-events-none rounded-full" />
+      <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] glow-spot-peach pointer-events-none rounded-full" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         

@@ -22,8 +22,8 @@ export default function Footer() {
   return (
     <footer className="bg-[#E9E8F8] border-t border-[#8DB9F0]/30 relative overflow-hidden overflow-x-clip max-w-full">
       {/* Ambient background glow in Powdered Blue & Sunset Peach */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[300px] bg-[#8DB9F0]/15 blur-[160px] pointer-events-none rounded-full" />
-      <div className="absolute bottom-0 right-1/4 w-[400px] h-[200px] bg-[#F5B69E]/15 blur-[140px] pointer-events-none rounded-full" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[300px] glow-spot-blue pointer-events-none rounded-full" />
+      <div className="absolute bottom-0 right-1/4 w-[400px] h-[200px] glow-spot-peach pointer-events-none rounded-full" />
 
       {/* Main Footer Container */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-8 relative z-10">

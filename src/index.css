@@ -33,6 +33,9 @@
     touch-action: pan-y;
     overscroll-behavior-x: none;
     -webkit-overflow-scrolling: touch;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
 
   #root {
@@ -66,18 +69,29 @@
 }
 
 @layer utilities {
+  /* Fast GPU-accelerated glow spots (zero rasterizer lag in Safari) */
+  .glow-spot-blue {
+    background: radial-gradient(circle, rgba(141, 185, 240, 0.32) 0%, rgba(141, 185, 240, 0.10) 45%, transparent 70%);
+    pointer-events: none;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+  }
+
+  .glow-spot-peach {
+    background: radial-gradient(circle, rgba(245, 182, 158, 0.32) 0%, rgba(245, 182, 158, 0.10) 45%, transparent 70%);
+    pointer-events: none;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+  }
+
   /* Frosted Glassmorphism with Soft Lavender White */
   .glass-panel {
-    background: rgba(255, 255, 255, 0.75);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    background: rgba(255, 255, 255, 0.85);
     border: 1px solid rgba(141, 185, 240, 0.25);
   }
 
   .glass-panel-elevated {
-    background: rgba(255, 255, 255, 0.90);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.95);
     border: 1px solid rgba(141, 185, 240, 0.35);
     box-shadow: 0 12px 32px rgba(27, 30, 46, 0.06);
   }

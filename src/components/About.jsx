@@ -48,8 +48,8 @@ export function About({ onExploreAccessories }) {
   return (
     <section id="about" className="py-12 lg:py-16 bg-[#E9E8F8] relative overflow-hidden">
       {/* Subtle background glow */}
-      <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#8DB9F0]/20 blur-[130px] pointer-events-none rounded-full" />
-      <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-[#F5B69E]/20 blur-[130px] pointer-events-none rounded-full" />
+      <div className="absolute top-0 right-1/4 w-96 h-96 glow-spot-blue pointer-events-none rounded-full" />
+      <div className="absolute bottom-0 left-1/4 w-96 h-96 glow-spot-peach pointer-events-none rounded-full" />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
@@ -105,7 +105,7 @@ export function About({ onExploreAccessories }) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.12 }}
-                className="group relative bg-white/90 backdrop-blur-md rounded-[28px] p-6 sm:p-7 border border-[#8DB9F0]/30 hover:border-[#8DB9F0] transition-all duration-300 flex flex-col justify-between shadow-card-soft hover:shadow-card-hover"
+                className="group relative bg-white/98 rounded-[28px] p-6 sm:p-7 border border-[#8DB9F0]/30 hover:border-[#8DB9F0] transition-all duration-300 flex flex-col justify-between shadow-card-soft hover:shadow-card-hover"
               >
                 {/* Top Subtle Metallic Edge */}
                 <div 

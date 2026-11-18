@@ -87,8 +87,8 @@ export default function IphoneSpecialist() {
   return (
     <section id="iphone-specialist" className="py-12 lg:py-16 bg-[#E9E8F8] relative overflow-hidden">
       {/* Ambient lighting */}
-      <div className="absolute top-1/3 right-10 w-[500px] h-[500px] bg-[#8DB9F0]/20 blur-[130px] pointer-events-none rounded-full" />
-      <div className="absolute bottom-10 left-10 w-96 h-96 bg-[#F5B69E]/20 blur-[120px] pointer-events-none rounded-full" />
+      <div className="absolute top-1/3 right-10 w-[500px] h-[500px] glow-spot-blue pointer-events-none rounded-full" />
+      <div className="absolute bottom-10 left-10 w-96 h-96 glow-spot-peach pointer-events-none rounded-full" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
@@ -204,7 +204,7 @@ export default function IphoneSpecialist() {
 
                 {/* Floating telemetry on image */}
                 <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between">
-                  <div className="bg-black/80 backdrop-blur-md px-3 py-1 rounded-full border border-white/20 flex items-center gap-1.5">
+                  <div className="bg-black/90 px-3 py-1 rounded-full border border-white/20 flex items-center gap-1.5 shadow-sm">
                     <span className="w-2 h-2 rounded-full bg-[#F5B69E] animate-pulse"></span>
                     <span className="text-[11px] font-mono font-medium text-white">
                       Microscope Bench Active

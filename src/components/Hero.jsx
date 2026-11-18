@@ -20,8 +20,8 @@ export default function Hero({ onExploreAccessories }) {
       className="relative pt-24 pb-8 lg:pt-28 lg:pb-12 flex items-center overflow-hidden overflow-x-clip max-w-full w-full bg-[#E9E8F8]"
     >
       {/* Background Ambient Lighting in Powdered Blue & Sunset Peach */}
-      <div className="absolute top-1/4 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[550px] sm:w-[750px] h-[550px] sm:h-[750px] bg-[#8DB9F0]/25 blur-[140px] pointer-events-none rounded-full" />
-      <div className="absolute top-1/3 right-10 w-[450px] sm:w-[550px] h-[450px] sm:h-[550px] bg-[#F5B69E]/25 blur-[140px] pointer-events-none rounded-full" />
+      <div className="absolute top-1/4 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[550px] sm:w-[750px] h-[550px] sm:h-[750px] glow-spot-blue pointer-events-none rounded-full" />
+      <div className="absolute top-1/3 right-10 w-[450px] sm:w-[550px] h-[450px] sm:h-[550px] glow-spot-peach pointer-events-none rounded-full" />
       
       {/* Subtle Dot Grid */}
       <div 
@@ -147,8 +147,8 @@ export default function Hero({ onExploreAccessories }) {
           <div className="lg:col-span-5 relative flex items-center justify-center pt-2 lg:pt-0">
             
             {/* Dual Glow behind device */}
-            <div className="absolute w-64 sm:w-80 h-64 sm:h-80 rounded-full bg-[#8DB9F0]/30 blur-[80px] -z-10 animate-pulse-slow pointer-events-none" />
-            <div className="absolute -bottom-6 -right-6 w-52 sm:w-72 h-52 sm:h-72 rounded-full bg-[#F5B69E]/30 blur-[80px] -z-10 pointer-events-none" />
+            <div className="absolute w-64 sm:w-80 h-64 sm:h-80 rounded-full glow-spot-blue -z-10 pointer-events-none" />
+            <div className="absolute -bottom-6 -right-6 w-52 sm:w-72 h-52 sm:h-72 rounded-full glow-spot-peach -z-10 pointer-events-none" />
 
             {/* Realistic iPhone Mockup Container (Sleek Compact Dimensions) */}
             <motion.div
@@ -275,7 +275,7 @@ export default function Hero({ onExploreAccessories }) {
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}
-              className="hidden sm:flex absolute -top-2 sm:-left-6 md:-left-10 bg-white/95 backdrop-blur-xl border border-[#8DB9F0]/40 rounded-2xl p-2.5 shadow-card-soft items-center gap-2.5 z-30 hover:border-[#8DB9F0] transition-colors"
+              className="hidden sm:flex absolute -top-2 sm:-left-6 md:-left-10 bg-white/98 border border-[#8DB9F0]/40 rounded-2xl p-2.5 shadow-card-soft items-center gap-2.5 z-30 hover:border-[#8DB9F0] transition-colors"
             >
               <div className="w-8 h-8 rounded-xl bg-[#8DB9F0]/20 border border-[#8DB9F0]/40 flex items-center justify-center text-[#8DB9F0]">
                 <Smartphone className="w-4 h-4" />
@@ -294,7 +294,7 @@ export default function Hero({ onExploreAccessories }) {
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.7 }}
-              className="hidden sm:flex absolute bottom-12 sm:-left-6 md:-left-10 bg-white/95 backdrop-blur-xl border border-[#F5B69E]/50 rounded-2xl p-2.5 shadow-card-soft items-center gap-2.5 z-30 hover:border-[#F5B69E] transition-colors"
+              className="hidden sm:flex absolute bottom-12 sm:-left-6 md:-left-10 bg-white/98 border border-[#F5B69E]/50 rounded-2xl p-2.5 shadow-card-soft items-center gap-2.5 z-30 hover:border-[#F5B69E] transition-colors"
             >
               <div className="w-8 h-8 rounded-xl bg-[#F5B69E]/20 border border-[#F5B69E]/40 flex items-center justify-center text-[#F5B69E]">
                 <Cpu className="w-4 h-4" />
@@ -310,7 +310,7 @@ export default function Hero({ onExploreAccessories }) {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
-              className="hidden sm:flex absolute top-1/2 sm:-right-6 md:-right-8 -translate-y-1/2 bg-white/95 backdrop-blur-xl border border-[#8DB9F0]/40 rounded-2xl p-2.5 shadow-card-soft items-center gap-2.5 z-30 hover:border-[#8DB9F0] transition-colors"
+              className="hidden sm:flex absolute top-1/2 sm:-right-6 md:-right-8 -translate-y-1/2 bg-white/98 border border-[#8DB9F0]/40 rounded-2xl p-2.5 shadow-card-soft items-center gap-2.5 z-30 hover:border-[#8DB9F0] transition-colors"
             >
               <div className="w-8 h-8 rounded-xl bg-[#8DB9F0]/20 border border-[#8DB9F0]/40 flex items-center justify-center text-[#8DB9F0]">
                 <BatteryCharging className="w-4 h-4 text-[#8DB9F0]" />

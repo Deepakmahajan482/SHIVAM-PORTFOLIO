@@ -39,8 +39,8 @@ export default function Gallery() {
   return (
     <section id="gallery" className="py-12 lg:py-16 bg-[#E9E8F8] relative overflow-hidden overflow-x-clip max-w-full">
       {/* Background glow in Powdered Blue & Sunset Peach */}
-      <div className="absolute top-1/3 left-10 w-96 h-96 bg-[#8DB9F0]/20 blur-[140px] pointer-events-none rounded-full" />
-      <div className="absolute bottom-10 right-10 w-96 h-96 bg-[#F5B69E]/20 blur-[140px] pointer-events-none rounded-full" />
+      <div className="absolute top-1/3 left-10 w-96 h-96 glow-spot-blue pointer-events-none rounded-full" />
+      <div className="absolute bottom-10 right-10 w-96 h-96 glow-spot-peach pointer-events-none rounded-full" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
@@ -108,12 +108,12 @@ export default function Gallery() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-transparent opacity-85 group-hover:opacity-95 transition-opacity" />
 
                 {/* Top Badge */}
-                <span className="absolute top-2.5 left-2.5 text-[9px] font-mono uppercase tracking-wider px-2 py-0.5 rounded-full bg-black/75 backdrop-blur-md text-[#F5B69E] border border-[#F5B69E]/40 font-bold shadow-sm">
+                <span className="absolute top-2.5 left-2.5 text-[9px] font-mono uppercase tracking-wider px-2 py-0.5 rounded-full bg-black/85 text-[#F5B69E] border border-[#F5B69E]/40 font-bold shadow-sm">
                   {item.categoryLabel}
                 </span>
 
                 {/* Expand Icon */}
-                <div className="absolute top-2.5 right-2.5 w-7 h-7 rounded-full bg-black/60 backdrop-blur-md border border-white/20 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="absolute top-2.5 right-2.5 w-7 h-7 rounded-full bg-black/75 border border-white/20 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity">
                   <Maximize2 className="w-3 h-3" />
                 </div>
 

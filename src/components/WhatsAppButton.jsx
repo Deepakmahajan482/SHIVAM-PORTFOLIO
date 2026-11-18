@@ -22,7 +22,7 @@ export default function WhatsAppButton() {
       
       {/* Expanded Quick Chat Card */}
       {isOpen && (
-        <div className="mb-3 w-[calc(100vw-2rem)] max-w-sm sm:w-96 rounded-[28px] bg-white/95 backdrop-blur-2xl border border-[#8DB9F0]/40 p-5 shadow-2xl animate-in fade-in slide-in-from-bottom-5 duration-200">
+        <div className="mb-3 w-[calc(100vw-2rem)] max-w-sm sm:w-96 rounded-[28px] bg-white/98 border border-[#8DB9F0]/40 p-5 shadow-2xl animate-in fade-in slide-in-from-bottom-5 duration-200">
           
           {/* Header */}
           <div className="flex items-center justify-between pb-3 border-b border-[#8DB9F0]/25 mb-3">

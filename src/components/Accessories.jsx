@@ -21,8 +21,8 @@ export default function Accessories() {
   return (
     <section id="accessories" className="py-12 lg:py-16 bg-[#E9E8F8] relative overflow-hidden overflow-x-clip max-w-full">
       {/* Background glow accents in Powdered Blue & Sunset Peach */}
-      <div className="absolute top-1/4 right-0 w-[450px] h-[450px] bg-[#8DB9F0]/20 blur-[140px] pointer-events-none rounded-full" />
-      <div className="absolute bottom-10 left-10 w-[400px] h-[400px] bg-[#F5B69E]/20 blur-[140px] pointer-events-none rounded-full" />
+      <div className="absolute top-1/4 right-0 w-[450px] h-[450px] glow-spot-blue pointer-events-none rounded-full" />
+      <div className="absolute bottom-10 left-10 w-[400px] h-[400px] glow-spot-peach pointer-events-none rounded-full" />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
@@ -88,7 +88,7 @@ export default function Accessories() {
                   />
                   
                   {/* Category Pill */}
-                  <span className="absolute top-3 left-3 text-[9px] font-mono uppercase tracking-wider px-2 py-0.5 rounded-full bg-white/90 backdrop-blur-md text-[#1B1E2E] border border-[#8DB9F0]/30 font-bold shadow-subtle">
+                  <span className="absolute top-3 left-3 text-[9px] font-mono uppercase tracking-wider px-2 py-0.5 rounded-full bg-white text-[#1B1E2E] border border-[#8DB9F0]/30 font-bold shadow-subtle">
                     {item.categoryLabel}
                   </span>
 

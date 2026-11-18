@@ -44,7 +44,7 @@ export default function Navbar() {
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? 'bg-[#E9E8F8]/90 backdrop-blur-xl border-b border-[#8DB9F0]/30 py-3 shadow-subtle' 
+          ? 'bg-[#E9E8F8]/95 border-b border-[#8DB9F0]/30 py-3 shadow-subtle' 
           : 'bg-transparent py-5'
       }`}
     >
@@ -146,7 +146,7 @@ export default function Navbar() {
 
       {/* Mobile Drawer */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden fixed inset-x-0 top-[65px] bg-[#E9E8F8]/95 backdrop-blur-2xl border-b border-[#8DB9F0]/30 p-6 shadow-2xl transition-all duration-300 animate-in slide-in-from-top-4">
+        <div className="lg:hidden fixed inset-x-0 top-[65px] bg-[#E9E8F8]/98 border-b border-[#8DB9F0]/30 p-6 shadow-2xl transition-all duration-300 animate-in slide-in-from-top-4">
           <div className="flex flex-col gap-1.5">
             {navLinks.map((link) => (
               <a
