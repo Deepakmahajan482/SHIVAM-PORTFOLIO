@@ -37,7 +37,7 @@ export default function Gallery() {
   };
 
   return (
-    <section id="gallery" className="py-12 lg:py-16 bg-[#E9E8F8] relative">
+    <section id="gallery" className="py-12 lg:py-16 bg-[#E9E8F8] relative overflow-hidden overflow-x-clip max-w-full">
       {/* Background glow in Powdered Blue & Sunset Peach */}
       <div className="absolute top-1/3 left-10 w-96 h-96 bg-[#8DB9F0]/20 blur-[140px] pointer-events-none rounded-full" />
       <div className="absolute bottom-10 right-10 w-96 h-96 bg-[#F5B69E]/20 blur-[140px] pointer-events-none rounded-full" />
@@ -101,6 +101,7 @@ export default function Gallery() {
                   alt={item.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   loading="lazy"
+                  decoding="async"
                 />
 
                 {/* Dark Vignette Overlay for photo captions */}

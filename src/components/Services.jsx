@@ -44,7 +44,7 @@ export default function Services() {
   });
 
   return (
-    <section id="services" className="py-12 lg:py-16 bg-[#E9E8F8] relative">
+    <section id="services" className="py-12 lg:py-16 bg-[#E9E8F8] relative overflow-hidden overflow-x-clip max-w-full">
       {/* Background accents in Powdered Blue & Sunset Peach */}
       <div className="absolute top-1/2 left-0 w-80 h-80 bg-[#8DB9F0]/20 blur-[130px] pointer-events-none rounded-full" />
       <div className="absolute bottom-10 right-0 w-80 h-80 bg-[#F5B69E]/20 blur-[120px] pointer-events-none rounded-full" />
@@ -77,11 +77,10 @@ export default function Services() {
               <button
                 key={tab.id}
                 onClick={() => setActiveFilter(tab.id)}
-                className={`px-4 py-1.5 rounded-full text-xs font-display font-bold tracking-wide transition-all duration-200 ${
-                  activeFilter === tab.id
-                    ? 'bg-gradient-to-r from-[#8DB9F0] to-[#F5B69E] text-[#1B1E2E] shadow-glow-blue'
-                    : 'bg-white/80 text-[#5C6079] hover:text-[#1B1E2E] border border-[#8DB9F0]/30 hover:border-[#8DB9F0] shadow-subtle'
-                }`}
+                className={`px-4 py-1.5 rounded-full text-xs font-display font-bold tracking-wide transition-all duration-200 ${activeFilter === tab.id
+                  ? 'bg-gradient-to-r from-[#8DB9F0] to-[#F5B69E] text-[#1B1E2E] shadow-glow-blue'
+                  : 'bg-white/80 text-[#5C6079] hover:text-[#1B1E2E] border border-[#8DB9F0]/30 hover:border-[#8DB9F0] shadow-subtle'
+                  }`}
               >
                 {tab.label}
               </button>
@@ -109,6 +108,7 @@ export default function Services() {
                     alt={service.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90 group-hover:opacity-100"
                     loading="lazy"
+                    decoding="async"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
 

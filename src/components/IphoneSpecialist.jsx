@@ -127,21 +127,19 @@ export default function IphoneSpecialist() {
                 <div
                   key={item.id}
                   onClick={() => setActiveTab(item.id)}
-                  className={`cursor-pointer rounded-2xl p-4 border transition-all duration-300 ${
-                    isActive
-                      ? 'bg-white border-[#8DB9F0] shadow-card-soft ring-2 ring-[#8DB9F0]/40'
-                      : 'bg-white/80 border-[#8DB9F0]/30 hover:border-[#8DB9F0] hover:bg-white'
-                  }`}
+                  className={`cursor-pointer rounded-2xl p-4 border transition-all duration-300 ${isActive
+                    ? 'bg-white border-[#8DB9F0] shadow-card-soft ring-2 ring-[#8DB9F0]/40'
+                    : 'bg-white/80 border-[#8DB9F0]/30 hover:border-[#8DB9F0] hover:bg-white'
+                    }`}
                 >
                   <div className="flex items-center justify-between mb-1.5">
                     <div className="flex items-center gap-2.5">
-                      <div className={`w-8 h-8 rounded-xl flex items-center justify-center transition-colors border ${
-                        isActive 
-                          ? 'bg-[#8DB9F0] text-[#1B1E2E] border-[#8DB9F0]' 
-                          : isPeach 
-                            ? 'bg-[#F5B69E]/20 text-[#F5B69E] border-[#F5B69E]/40' 
-                            : 'bg-[#8DB9F0]/20 text-[#8DB9F0] border-[#8DB9F0]/40'
-                      }`}>
+                      <div className={`w-8 h-8 rounded-xl flex items-center justify-center transition-colors border ${isActive
+                        ? 'bg-[#8DB9F0] text-[#1B1E2E] border-[#8DB9F0]'
+                        : isPeach
+                          ? 'bg-[#F5B69E]/20 text-[#F5B69E] border-[#F5B69E]/40'
+                          : 'bg-[#8DB9F0]/20 text-[#8DB9F0] border-[#8DB9F0]/40'
+                        }`}>
                         <Icon className="w-4 h-4" />
                       </div>
                       <h3 className="font-display text-sm sm:text-base font-bold text-[#1B1E2E]">
@@ -199,6 +197,8 @@ export default function IphoneSpecialist() {
                   src={IMAGES.iphoneSpecialist}
                   alt="Precision iPhone Repair"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
 

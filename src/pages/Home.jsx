@@ -21,7 +21,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-[#E9E8F8] text-[#1B1E2E] selection:bg-[#8DB9F0] selection:text-[#1B1E2E] flex flex-col">
+    <div className="min-h-screen bg-[#E9E8F8] text-[#1B1E2E] selection:bg-[#8DB9F0] selection:text-[#1B1E2E] flex flex-col overflow-x-hidden w-full max-w-full">
 
       {/* SECTION 1: NAVBAR */}
       <Navbar />

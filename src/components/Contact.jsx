@@ -104,7 +104,7 @@ I would like to enquire about smartphone repair:
   };
 
   return (
-    <section id="contact" className="py-12 lg:py-16 bg-[#E9E8F8] relative">
+    <section id="contact" className="py-12 lg:py-16 bg-[#E9E8F8] relative overflow-hidden overflow-x-clip max-w-full">
       {/* Background glow */}
       <div className="absolute top-1/2 right-1/4 w-[500px] h-[500px] bg-[#8DB9F0]/20 blur-[150px] pointer-events-none rounded-full" />
       <div className="absolute bottom-10 left-10 w-[450px] h-[450px] bg-[#F5B69E]/20 blur-[150px] pointer-events-none rounded-full" />

@@ -20,7 +20,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-[#E9E8F8] border-t border-[#8DB9F0]/30 relative overflow-hidden">
+    <footer className="bg-[#E9E8F8] border-t border-[#8DB9F0]/30 relative overflow-hidden overflow-x-clip max-w-full">
       {/* Ambient background glow in Powdered Blue & Sunset Peach */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[300px] bg-[#8DB9F0]/15 blur-[160px] pointer-events-none rounded-full" />
       <div className="absolute bottom-0 right-1/4 w-[400px] h-[200px] bg-[#F5B69E]/15 blur-[140px] pointer-events-none rounded-full" />
@@ -39,6 +39,10 @@ export default function Footer() {
                     src={IMAGES.logo} 
                     alt="FIX BY SHIVAM" 
                     className="w-full h-full object-cover"
+                    width="44"
+                    height="44"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
                 <div className="flex flex-col">

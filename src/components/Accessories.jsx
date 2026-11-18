@@ -19,7 +19,7 @@ export default function Accessories() {
   });
 
   return (
-    <section id="accessories" className="py-12 lg:py-16 bg-[#E9E8F8] relative">
+    <section id="accessories" className="py-12 lg:py-16 bg-[#E9E8F8] relative overflow-hidden overflow-x-clip max-w-full">
       {/* Background glow accents in Powdered Blue & Sunset Peach */}
       <div className="absolute top-1/4 right-0 w-[450px] h-[450px] bg-[#8DB9F0]/20 blur-[140px] pointer-events-none rounded-full" />
       <div className="absolute bottom-10 left-10 w-[400px] h-[400px] bg-[#F5B69E]/20 blur-[140px] pointer-events-none rounded-full" />
@@ -84,6 +84,7 @@ export default function Accessories() {
                     alt={item.name}
                     className="w-full h-full object-cover rounded-2xl group-hover:scale-108 transition-transform duration-500 shadow-sm"
                     loading="lazy"
+                    decoding="async"
                   />
                   
                   {/* Category Pill */}

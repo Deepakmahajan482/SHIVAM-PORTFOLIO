@@ -62,6 +62,9 @@ export default function Navbar() {
                 src={IMAGES.logo} 
                 alt="FIX BY SHIVAM" 
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                width="44"
+                height="44"
+                decoding="async"
               />
             </div>
             <div className="flex flex-col">

@@ -17,7 +17,7 @@ export default function Hero({ onExploreAccessories }) {
   return (
     <section 
       id="hero" 
-      className="relative pt-24 pb-8 lg:pt-28 lg:pb-12 flex items-center overflow-hidden bg-[#E9E8F8]"
+      className="relative pt-24 pb-8 lg:pt-28 lg:pb-12 flex items-center overflow-hidden overflow-x-clip max-w-full w-full bg-[#E9E8F8]"
     >
       {/* Background Ambient Lighting in Powdered Blue & Sunset Peach */}
       <div className="absolute top-1/4 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[550px] sm:w-[750px] h-[550px] sm:h-[750px] bg-[#8DB9F0]/25 blur-[140px] pointer-events-none rounded-full" />
@@ -155,7 +155,7 @@ export default function Hero({ onExploreAccessories }) {
               initial={{ opacity: 0, scale: 0.94, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 0.7, ease: "easeOut" }}
-              className="relative w-[280px] sm:w-[320px] md:w-[335px] h-[550px] sm:h-[600px] bg-[#D7E4F7] rounded-[44px] p-2.5 sm:p-3 shadow-phone-frame-soft phone-chassis-custom select-none"
+              className="relative w-[260px] xs:w-[280px] sm:w-[320px] md:w-[335px] h-[520px] sm:h-[600px] bg-[#D7E4F7] rounded-[44px] p-2.5 sm:p-3 shadow-phone-frame-soft phone-chassis-custom select-none mx-auto"
               style={{
                 perspective: "1000px",
                 transform: "rotateY(-3deg) rotateX(3deg)",
@@ -270,12 +270,12 @@ export default function Hero({ onExploreAccessories }) {
               </div>
             </motion.div>
 
-            {/* Floating Mini-Card 1: iPhone Specialist (Top Left) */}
+            {/* Desktop Floating Mini-Card 1: iPhone Specialist (Top Left) */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}
-              className="absolute -top-2 -left-4 sm:-left-10 bg-white/95 backdrop-blur-xl border border-[#8DB9F0]/40 rounded-2xl p-2.5 shadow-card-soft flex items-center gap-2.5 z-30 hover:border-[#8DB9F0] transition-colors"
+              className="hidden sm:flex absolute -top-2 sm:-left-6 md:-left-10 bg-white/95 backdrop-blur-xl border border-[#8DB9F0]/40 rounded-2xl p-2.5 shadow-card-soft items-center gap-2.5 z-30 hover:border-[#8DB9F0] transition-colors"
             >
               <div className="w-8 h-8 rounded-xl bg-[#8DB9F0]/20 border border-[#8DB9F0]/40 flex items-center justify-center text-[#8DB9F0]">
                 <Smartphone className="w-4 h-4" />
@@ -289,12 +289,12 @@ export default function Hero({ onExploreAccessories }) {
               </div>
             </motion.div>
 
-            {/* Floating Mini-Card 2: Professional Repairs (Bottom Left) */}
+            {/* Desktop Floating Mini-Card 2: Professional Repairs (Bottom Left) */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.7 }}
-              className="absolute bottom-12 -left-4 sm:-left-10 bg-white/95 backdrop-blur-xl border border-[#F5B69E]/50 rounded-2xl p-2.5 shadow-card-soft flex items-center gap-2.5 z-30 hover:border-[#F5B69E] transition-colors"
+              className="hidden sm:flex absolute bottom-12 sm:-left-6 md:-left-10 bg-white/95 backdrop-blur-xl border border-[#F5B69E]/50 rounded-2xl p-2.5 shadow-card-soft items-center gap-2.5 z-30 hover:border-[#F5B69E] transition-colors"
             >
               <div className="w-8 h-8 rounded-xl bg-[#F5B69E]/20 border border-[#F5B69E]/40 flex items-center justify-center text-[#F5B69E]">
                 <Cpu className="w-4 h-4" />
@@ -305,12 +305,12 @@ export default function Hero({ onExploreAccessories }) {
               </div>
             </motion.div>
 
-            {/* Floating Mini-Card 3: Premium Accessories (Right) */}
+            {/* Desktop Floating Mini-Card 3: Premium Accessories (Right) */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
-              className="absolute top-1/2 -right-3 sm:-right-8 -translate-y-1/2 bg-white/95 backdrop-blur-xl border border-[#8DB9F0]/40 rounded-2xl p-2.5 shadow-card-soft flex items-center gap-2.5 z-30 hover:border-[#8DB9F0] transition-colors"
+              className="hidden sm:flex absolute top-1/2 sm:-right-6 md:-right-8 -translate-y-1/2 bg-white/95 backdrop-blur-xl border border-[#8DB9F0]/40 rounded-2xl p-2.5 shadow-card-soft items-center gap-2.5 z-30 hover:border-[#8DB9F0] transition-colors"
             >
               <div className="w-8 h-8 rounded-xl bg-[#8DB9F0]/20 border border-[#8DB9F0]/40 flex items-center justify-center text-[#8DB9F0]">
                 <BatteryCharging className="w-4 h-4 text-[#8DB9F0]" />
@@ -320,6 +320,22 @@ export default function Hero({ onExploreAccessories }) {
                 <span className="text-[9px] text-[#5C6079] font-mono font-medium">Cases, Glass & GaN Power</span>
               </div>
             </motion.div>
+
+            {/* Mobile Feature Badges (Contained, Zero Horizontal Overflow) */}
+            <div className="sm:hidden flex flex-wrap items-center justify-center gap-2 mt-4 w-full px-1 z-20">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/95 border border-[#8DB9F0]/30 shadow-subtle text-[11px] font-bold text-[#1B1E2E]">
+                <Smartphone className="w-3.5 h-3.5 text-[#8DB9F0]" />
+                <span>iPhone Specialist</span>
+              </span>
+              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/95 border border-[#F5B69E]/40 shadow-subtle text-[11px] font-bold text-[#1B1E2E]">
+                <Cpu className="w-3.5 h-3.5 text-[#F5B69E]" />
+                <span>Chip-Level Repair</span>
+              </span>
+              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/95 border border-[#8DB9F0]/30 shadow-subtle text-[11px] font-bold text-[#1B1E2E]">
+                <BatteryCharging className="w-3.5 h-3.5 text-[#8DB9F0]" />
+                <span>Accessories</span>
+              </span>
+            </div>
 
           </div>
 
