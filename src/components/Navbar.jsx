@@ -189,7 +189,7 @@ export default function Navbar() {
                 className="flex items-center gap-2 text-sm text-[#5C6079] hover:text-[#F5B69E] transition-colors font-mono font-semibold"
               >
                 <Phone className="w-4 h-4 text-[#F5B69E]" />
-                <span>+91 80123 92222</span>
+                <span>+91 9779505101</span>
               </a>
             </div>
           </div>
