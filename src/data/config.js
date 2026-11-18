@@ -16,11 +16,11 @@ export const BRAND_CONFIG = {
   instagramHandle: "@fixbyshivam",
 
   // Business Contact
-  whatsappNumber: "918012392222", // Active WhatsApp number with country code
-  whatsappDisplayNumber: "+91 80123 92222",
-  phoneNumber: "+91 80123 92222",
-  phoneRaw: "+918012392222",
-  email: "contact@fixbyshivam.com",
+  whatsappNumber: "919779505101", // Active WhatsApp number with country code
+  whatsappDisplayNumber: "+91 97795 05101",
+  phoneNumber: "+91 97795 05101",
+  phoneRaw: "+919779505101",
+  email: "Shibhu.aggarwal@gmail.com",
 
   // Location & Working Hours (Configurable placeholders)
   address: {
