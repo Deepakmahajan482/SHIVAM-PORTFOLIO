@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-primary: #E9E8F8;
+    --accent-blue: #8DB9F0;
+    --accent-peach: #F5B69E;
+    --text-primary: #1B1E2E;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    color-scheme: light;
+  }
+
+  body {
+    background-color: #E9E8F8;
+    color: #1B1E2E;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  /* Custom scrollbar with Powdered Blue & Sunset Peach */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #E9E8F8;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #8DB9F0;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #F5B69E;
+  }
+}
+
+@layer utilities {
+  /* Frosted Glassmorphism with Soft Lavender White */
+  .glass-panel {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(141, 185, 240, 0.25);
+  }
+
+  .glass-panel-elevated {
+    background: rgba(255, 255, 255, 0.90);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(141, 185, 240, 0.35);
+    box-shadow: 0 12px 32px rgba(27, 30, 46, 0.06);
+  }
+
+  /* Phone frame with Powdered Blue / Silver Chassis */
+  .phone-chassis-custom {
+    border: 2px solid #D1E1F7;
+    box-shadow: 
+      0 0 0 1px #BDD4F5,
+      0 30px 70px -15px rgba(27, 30, 46, 0.20),
+      0 12px 28px -5px rgba(141, 185, 240, 0.30),
+      inset 0 1.5px 2px 0 rgba(255, 255, 255, 0.95),
+      inset 0 -1.5px 2px 0 rgba(141, 185, 240, 0.25);
+  }
+
+  /* Ambient Glows */
+  .ambient-glow-blue {
+    background: radial-gradient(circle at 50% 50%, rgba(141, 185, 240, 0.35) 0%, rgba(141, 185, 240, 0.08) 50%, transparent 80%);
+  }
+
+  .ambient-glow-peach {
+    background: radial-gradient(circle at 50% 50%, rgba(245, 182, 158, 0.35) 0%, rgba(245, 182, 158, 0.08) 50%, transparent 80%);
+  }
+
+  /* Screen Reflection Gradient */
+  .screen-reflection {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.35) 0%,
+      rgba(255, 255, 255, 0.08) 35%,
+      transparent 60%
+    );
+  }
+}
