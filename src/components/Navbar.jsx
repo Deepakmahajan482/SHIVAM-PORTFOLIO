@@ -15,6 +15,18 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Lock background scroll when mobile menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isMobileMenuOpen]);
+
   const navLinks = [
     { label: "Home", href: "#hero" },
     { label: "About", href: "#about" },
@@ -43,10 +55,11 @@ export default function Navbar() {
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? 'bg-[#E9E8F8]/95 border-b border-[#8DB9F0]/30 py-3 shadow-subtle' 
+        isScrolled || isMobileMenuOpen
+          ? 'bg-[#E9E8F8] border-b border-[#8DB9F0]/30 py-3 shadow-md' 
           : 'bg-transparent py-5'
       }`}
+      style={{ backgroundColor: (isScrolled || isMobileMenuOpen) ? '#E9E8F8' : undefined }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
@@ -146,41 +159,44 @@ export default function Navbar() {
 
       {/* Mobile Drawer */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden fixed inset-x-0 top-[65px] bg-[#E9E8F8]/98 border-b border-[#8DB9F0]/30 p-6 shadow-2xl transition-all duration-300 animate-in slide-in-from-top-4">
-          <div className="flex flex-col gap-1.5">
+        <div 
+          className="lg:hidden fixed inset-x-0 top-[64px] bottom-0 h-[calc(100dvh-64px)] bg-[#E9E8F8] z-50 p-5 sm:p-6 shadow-2xl overflow-y-auto flex flex-col justify-between"
+          style={{ backgroundColor: '#E9E8F8' }}
+        >
+          <div className="flex flex-col gap-2">
             {navLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href)}
-                className="flex items-center justify-between px-4 py-3 rounded-2xl text-base font-medium text-[#1B1E2E] hover:bg-white/70 hover:text-[#8DB9F0] transition-colors"
+                className="flex items-center justify-between px-4 py-3.5 rounded-2xl text-base font-semibold text-[#1B1E2E] bg-white border border-[#8DB9F0]/30 shadow-subtle hover:border-[#8DB9F0] hover:bg-[#8DB9F0]/10 transition-all active:scale-[0.98]"
               >
                 <span>{link.label}</span>
-                <ArrowRight className="w-4 h-4 text-[#5C6079]" />
+                <ArrowRight className="w-4 h-4 text-[#8DB9F0]" />
               </a>
             ))}
           </div>
 
-          <div className="mt-6 pt-6 border-t border-[#8DB9F0]/25 flex flex-col gap-3">
+          <div className="mt-6 pt-5 border-t border-[#8DB9F0]/30 flex flex-col gap-3">
             <a
               href={getWhatsAppLink()}
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setIsMobileMenuOpen(false)}
-              className="w-full flex items-center justify-center gap-2 py-3.5 rounded-2xl font-bold text-[#1B1E2E] bg-gradient-to-r from-[#8DB9F0] to-[#F5B69E] shadow-glow-blue transition-all"
+              className="w-full flex items-center justify-center gap-2 py-3.5 rounded-2xl font-bold text-[#1B1E2E] bg-gradient-to-r from-[#8DB9F0] to-[#F5B69E] shadow-glow-blue transition-all active:scale-[0.98]"
             >
               <MessageSquare className="w-4 h-4" />
               <span>Chat on WhatsApp</span>
             </a>
 
-            <div className="flex items-center justify-center gap-4 pt-2">
+            <div className="flex items-center justify-center gap-4 pt-2 pb-6">
               <a
                 href={BRAND_CONFIG.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-sm text-[#5C6079] hover:text-[#8DB9F0] transition-colors font-medium"
               >
-                <Instagram className="w-4 h-4" />
+                <Instagram className="w-4 h-4 text-[#8DB9F0]" />
                 <span>@fixbyshivam</span>
               </a>
               <span className="text-[#8DB9F0]/40">•</span>
@@ -189,7 +205,7 @@ export default function Navbar() {
                 className="flex items-center gap-2 text-sm text-[#5C6079] hover:text-[#F5B69E] transition-colors font-mono font-semibold"
               >
                 <Phone className="w-4 h-4 text-[#F5B69E]" />
-                <span>+91 9779505101</span>
+                <span>{BRAND_CONFIG.phoneNumber}</span>
               </a>
             </div>
           </div>
